@@ -26,9 +26,9 @@ public class HealthPack : MonoBehaviour
         if (!live)
         {
             cooldown -= Time.deltaTime;
-            float opacity = 1 - cooldown / maxCD;
+            float opacity = 0;
 
-            if (cooldown < 0)
+            if ((GameManager.instance.numPlayers > 2) && cooldown < 0)
             {
                 live = true;
                 opacity = 1;
@@ -46,7 +46,7 @@ public class HealthPack : MonoBehaviour
         {
             HorseScript horse = col.gameObject.GetComponent<HorseScript>();
             live = false;
-            cooldown = maxCD;
+            cooldown = maxCD * GameManager.instance.timeSpeedFactor;
             horse.health += strength;
         }
     }

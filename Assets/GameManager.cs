@@ -9,24 +9,46 @@ public class GameManager : MonoBehaviour
     public float timeSpeedFactor;
 
     public GameObject[] players;
+    public GameObject card;
 
     public MapScript map;
+    public Leaderboard leaderboard;
+
+    public int numPlayers;
 
     public static GameManager instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
 
         for (int i = 0; i < players.Length; i++)
         {
-            if (i == 1)
-            {
-                GameObject p = Instantiate(players[i]);
-                p.GetComponent<HorseScript>().facing = map.spawns[i].facing;
-                p.transform.position = map.spawns[i].transform.position;
-            }
+            // Make horse
+            HorseInfoScript horseInfo = Instantiate(players[i]).GetComponent<HorseInfoScript>();
+            HorseScript horse = Instantiate(horseInfo.horse).GetComponent<HorseScript>();
+
+            // set spawn data
+            horse.facing = map.spawns[i].facing;
+            horse.gameObject.transform.position = map.spawns[i].transform.position;
+            horse.sprite.sprite = horseInfo.sprite;
+
+            // make card
+            PlayerCard pCard = Instantiate(card, leaderboard.transform).GetComponent<PlayerCard>();
+            pCard.title.text = horseInfo.horseName;
+            pCard.horse = horse;
+            pCard.icon.sprite = horseInfo.sprite;
+
+            leaderboard.cards[i] = pCard;
+
+            numPlayers++;
         }
     }
 
@@ -36,6 +58,6 @@ public class GameManager : MonoBehaviour
         time += Time.deltaTime;
 
         // calculate time speed factor (make horses faster as time goes on)
-        timeSpeedFactor = Mathf.Pow(time, 2) / 7500 + 1;
+        timeSpeedFactor = Mathf.Pow(time, 2) / 5000 + 1;
     }
 }
