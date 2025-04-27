@@ -145,7 +145,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6017385442152306695
 BoxCollider2D:
@@ -259,11 +259,12 @@ MonoBehaviour:
   speed: 1
   maxHealth: 100
   health: 100
-  strength: 10
+  strength: 15
   hpP: 0
   invincible: 0
   iFrames: 0
   facing: {x: 0, y: 0}
+  wreck: {fileID: 4364366570212566915, guid: cd1bd87ce6ed80c498383c0ff5998783, type: 3}
   sprite: {fileID: 4099665100304222789}
   aura: {fileID: 3312989263956825700}
   rb: {fileID: 5890352933062390901}

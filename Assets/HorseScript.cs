@@ -21,6 +21,8 @@ public class HorseScript : MonoBehaviour
 
     public Vector2 facing;
 
+    public GameObject wreck;
+
     public SpriteRenderer sprite;
     public SpriteRenderer aura;
 
@@ -46,17 +48,9 @@ public class HorseScript : MonoBehaviour
         Vector2 vec = rb.velocity;
         rb.velocity = vec.normalized * speed;
 
-        // 
         if (health > maxHealth)
         {
             health = maxHealth;
-        }
-
-        // Hp = 0 -> dies
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-            GameManager.instance.numPlayers--;
         }
 
 
@@ -98,6 +92,26 @@ public class HorseScript : MonoBehaviour
             c.a = 1f;
         }
         sprite.color = c;
+
+
+        // Hp = 0 -> dies
+        if (health <= 0)
+        {
+            Sprite sp = sprite.sprite;
+            Vector2 vel = facing.normalized * speed;
+
+            // DEATH
+            Destroy(gameObject);
+            GameManager.instance.numPlayers--;
+
+            // Summon Wreck
+            WreckScript w = Instantiate(wreck).GetComponent<WreckScript>();
+            w.transform.position = transform.position;
+            Debug.Log("merp");
+            w.sprite.sprite = sp;
+            w.rb.velocity = vel;
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

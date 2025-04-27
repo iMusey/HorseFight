@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 64671121}
   rb: {fileID: 0}
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 168992268}
   rb: {fileID: 0}
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 500891371}
   rb: {fileID: 0}
@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 589471916}
   rb: {fileID: 0}
@@ -1574,7 +1574,7 @@ MonoBehaviour:
   - {fileID: 8926047026493670428, guid: d6096bd2c4677d64c8e1e409a701f9b3, type: 3}
   - {fileID: 4694872061143308254, guid: cebfe5ca45749aa4783a641031d876df, type: 3}
   - {fileID: 8954048501882398609, guid: 5677f5640f626574eb830973215d5d42, type: 3}
-  - {fileID: 7106298418135058264, guid: 72ecce253241faa4bb50d95a71da77c2, type: 3}
+  - {fileID: 3003989776850591575, guid: dab70d3a05cee444bae48a362cf70352, type: 3}
   card: {fileID: 4717791713800700099, guid: 5ada92929681ae04089e2efdf2e40651, type: 3}
   map: {fileID: 1080610369}
   leaderboard: {fileID: 185395646}
@@ -1588,7 +1588,7 @@ Transform:
   m_GameObject: {fileID: 607586336}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7183899, y: 0.050977148, z: 0.03597336}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 836899675}
   rb: {fileID: 0}
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 1015228077}
   rb: {fileID: 0}
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 1156964528}
   rb: {fileID: 0}
@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 5
   live: 1
-  maxCD: 15
+  maxCD: 10
   cooldown: 0
   sprite: {fileID: 1220148437}
   rb: {fileID: 0}
