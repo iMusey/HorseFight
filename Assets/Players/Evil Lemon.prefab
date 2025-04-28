@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 0749321c8b5f29943a97b36d21bbdcb7, type: 3}
-  horse: {fileID: 4674818851835584762, guid: e31e0d0988671754fac8b0353a032eae, type: 3}
+  horse: {fileID: 4674818851835584762, guid: 32194b28e3734ef448a1afe8a7875cb3, type: 3}
   horseName: Evil Lemon >:))
   horseAlias: Evil

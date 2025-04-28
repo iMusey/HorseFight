@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -2083,7 +2083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -2509,7 +2509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0
@@ -2816,7 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3747c2e3b939d40ac108c60c89732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 5
+  strength: 10
   live: 1
   maxCD: 10
   cooldown: 0

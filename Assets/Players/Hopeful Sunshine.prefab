@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c3956e4879ec03b40b8beae576934a81, type: 3}
-  horse: {fileID: 4674818851835584762, guid: e31e0d0988671754fac8b0353a032eae, type: 3}
+  horse: {fileID: 4674818851835584762, guid: f75bd000fc3eebb4fa4c6510188873e1, type: 3}
   horseName: Hopeful Sunshine
   horseAlias: Hope
