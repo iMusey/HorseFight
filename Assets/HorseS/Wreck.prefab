@@ -315,6 +315,7 @@ MonoBehaviour:
   strength: 10
   propulsion: 2
   radius: 2
+  scrap: {fileID: 5738274794832540712, guid: 1b37b5d664db66043a8e158c1c75c694, type: 3}
 --- !u!1 &4476724152074611755
 GameObject:
   m_ObjectHideFlags: 0

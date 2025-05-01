@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
+    public bool devMode;
+
     public float time;
     public float timeSpeedFactor;
 
@@ -28,12 +30,22 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (devMode)
+        {
+            time = 90;
+        }
 
         for (int i = 0; i < players.Length; i++)
         {
             // Make horse
             HorseInfoScript horseInfo = Instantiate(players[i]).GetComponent<HorseInfoScript>();
             HorseScript horse = Instantiate(horseInfo.horse).GetComponent<HorseScript>();
+
+            if (devMode)
+            {
+                horse.maxHealth = horse.maxHealth / 3;
+                horse.speed = horse.speed * 2;
+            }
 
             // set spawn data
             horse.facing = map.spawns[i].facing;

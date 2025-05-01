@@ -113,7 +113,6 @@ public class HorseScript : MonoBehaviour
             // Summon Wreck
             WreckScript w = Instantiate(wreck).GetComponent<WreckScript>();
             w.transform.position = transform.position;
-            Debug.Log("merp");
             w.sprite.sprite = sp;
             w.rb.velocity = vel;
 

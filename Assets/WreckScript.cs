@@ -16,6 +16,7 @@ public class WreckScript : MonoBehaviour
     public float propulsion;
     public float radius;
 
+    public GameObject scrap;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +38,25 @@ public class WreckScript : MonoBehaviour
         color.a = .5f - countDown / 5;
         blastRadius.color = color;
 
-        if (countDown <= 0)
+        if (countDown < 0)
         {
+            int numScrap = Random.Range(1, 3);
+            for (int i = 0; i < numScrap; i++)
+            {
+                ScrapScript s = Instantiate(scrap).GetComponent<ScrapScript>();
+                s.transform.position = transform.position;
+
+                //random velocity
+                Vector2 vel = new Vector2(Random.value, Random.value);
+                vel = vel.normalized * propulsion * GameManager.instance.timeSpeedFactor;
+
+                // add velocity to scrap
+                s.rb.velocity = vel;
+
+                s.transform.localScale = transform.localScale / (1 + 0.1f * (numScrap + 0.5f));
+                s.rb.mass = s.rb.mass / (1 + 0.2f * (numScrap + 0.5f));
+            }
+
             Explode(transform.position);
         }
     }
@@ -61,7 +79,6 @@ public class WreckScript : MonoBehaviour
 
             }
         }
-
         // DIE
         Destroy(gameObject);
     }
