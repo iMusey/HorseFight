@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             horse.facing = map.spawns[i].facing;
             horse.gameObject.transform.position = map.spawns[i].transform.position;
             horse.sprite.sprite = horseInfo.sprite;
+            horse.bounceHit = horseInfo.hitSound;
 
             // make card
             PlayerCard pCard = Instantiate(card, leaderboard.transform).GetComponent<PlayerCard>();

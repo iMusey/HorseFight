@@ -48,3 +48,4 @@ MonoBehaviour:
   horse: {fileID: 4674818851835584762, guid: 32194b28e3734ef448a1afe8a7875cb3, type: 3}
   horseName: Glorp
   horseAlias: Glorp
+  hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}

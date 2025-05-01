@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -25,6 +26,11 @@ public class HorseScript : MonoBehaviour
 
     public SpriteRenderer sprite;
     public SpriteRenderer aura;
+
+    public AudioSource audioPlayer;
+    public AudioClip bounce;
+    public AudioClip bounceHit;
+    public float volume;
 
     public Rigidbody2D rb;
 
@@ -124,11 +130,15 @@ public class HorseScript : MonoBehaviour
 
             horse.health -= strength;
 
+            audioPlayer.PlayOneShot(bounceHit, volume);
+
             invincible = true;
             iFrames = 0.2f;
         }
         else
         {
+            audioPlayer.PlayOneShot(bounce, volume);
+
             // Random Bounce direction sometimes
             int rand = Random.Range(0, 2);
 

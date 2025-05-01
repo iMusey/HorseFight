@@ -48,3 +48,4 @@ MonoBehaviour:
   horse: {fileID: 4674818851835584762, guid: e31e0d0988671754fac8b0353a032eae, type: 3}
   horseName: Evanescent Infamous Harbinger
   horseAlias: Eva
+  hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}

@@ -48,3 +48,4 @@ MonoBehaviour:
   horse: {fileID: 4674818851835584762, guid: f75bd000fc3eebb4fa4c6510188873e1, type: 3}
   horseName: Jackson Drape
   horseAlias: Drape
+  hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}
