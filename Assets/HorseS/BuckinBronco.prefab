@@ -96,10 +96,10 @@ GameObject:
   - component: {fileID: 5890352933062390901}
   - component: {fileID: 6017385442152306695}
   - component: {fileID: 4099665100304222789}
-  - component: {fileID: 5950257014307630351}
+  - component: {fileID: 2681291031955997955}
   - component: {fileID: -5353233508767398357}
   m_Layer: 0
-  m_Name: Standard
+  m_Name: BuckinBronco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5950257014307630351
+--- !u!114 &2681291031955997955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4674818851835584762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8ac6a6b302c304f8f4bd80d24b85c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b77ad0b5f2d2034e8e82720926853c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.25

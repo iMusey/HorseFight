@@ -10,7 +10,7 @@ using UnityEngine.Rendering;
 public class HorseScript : MonoBehaviour
 {
     public float speed;
-    private float baseSpeed;
+    public float baseSpeed;
     public float maxHealth;
     public float health;
     public float strength;
@@ -19,6 +19,8 @@ public class HorseScript : MonoBehaviour
 
     public bool invincible;
     public float iFrames;
+
+    public float stunned;
 
     public Vector2 facing;
 
@@ -35,7 +37,7 @@ public class HorseScript : MonoBehaviour
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         rb.velocity = facing.normalized * speed;
 
@@ -43,31 +45,37 @@ public class HorseScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
-        // speed manipulation
-
         // speed gets faster with time
         speed = baseSpeed * GameManager.instance.timeSpeedFactor;
 
-        // correct velocity to always equal speed
-        Vector2 vec = rb.velocity;
-        rb.velocity = vec.normalized * speed;
 
         if (health > maxHealth)
         {
             health = maxHealth;
         }
 
-
-        facing = rb.velocity;
-        if (facing.x < 0)
+        if (stunned >= 0)
         {
-            sprite.flipX = true;
+            stunned -= Time.deltaTime;
         }
-        else
+
+        if (stunned <= 0)
         {
-            sprite.flipX = false;
+            facing = rb.velocity;
+            if (facing.x < 0)
+            {
+                sprite.flipX = true;
+            }
+            else
+            {
+                sprite.flipX = false;
+            }
+
+            // correct velocity to always equal speed
+            Vector2 vec = rb.velocity;
+            rb.velocity = vec.normalized * speed;
         }
 
         // Health
@@ -119,7 +127,7 @@ public class HorseScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
 
         // Deal Damage when horses hit
@@ -149,7 +157,7 @@ public class HorseScript : MonoBehaviour
         }
     }
 
-    public void IFrames()
+    public virtual void IFrames()
     {
         iFrames -= Time.deltaTime;
 

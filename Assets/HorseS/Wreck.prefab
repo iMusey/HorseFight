@@ -312,7 +312,7 @@ MonoBehaviour:
   sprite: {fileID: 2364544913599308211}
   blastRadius: {fileID: 7011537646720890122}
   countDown: 5
-  strength: 10
+  strength: 20
   propulsion: 2
   radius: 2
   scrap: {fileID: 5738274794832540712, guid: 1b37b5d664db66043a8e158c1c75c694, type: 3}

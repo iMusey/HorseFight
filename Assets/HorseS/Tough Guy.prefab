@@ -134,7 +134,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.75
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: d33a75cc67c4c4443ab97afc4c238f1f, type: 2}
@@ -264,11 +264,12 @@ MonoBehaviour:
   hpP: 0
   invincible: 0
   iFrames: 0
+  stunned: 0
   facing: {x: 0, y: 0}
   wreck: {fileID: 4364366570212566915, guid: cd1bd87ce6ed80c498383c0ff5998783, type: 3}
   sprite: {fileID: 4099665100304222789}
   aura: {fileID: 3312989263956825700}
-  audioPlayer: {fileID: -3445379761498842135, guid: 32194b28e3734ef448a1afe8a7875cb3, type: 3}
+  audioPlayer: {fileID: -5514617813071297640}
   bounce: {fileID: 8300000, guid: cf1fce3002d1a2641808373c4a754ab0, type: 3}
   bounceHit: {fileID: 0}
   volume: 0.05
@@ -284,7 +285,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

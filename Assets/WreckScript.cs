@@ -71,14 +71,15 @@ public class WreckScript : MonoBehaviour
             if (target.gameObject.GetComponent<HorseScript>() != null)
             {
                 Vector2 blastDir = target.transform.position - transform.position;
-                target.attachedRigidbody.velocity = blastDir.normalized * propulsion;
+                target.attachedRigidbody.velocity = blastDir.normalized * propulsion * GameManager.instance.timeSpeedFactor;
                 HorseScript h = target.GetComponent<HorseScript>();
 
                 h.facing = blastDir;
                 h.health -= strength;
-
+                h.stunned += 1.5f;
             }
         }
+
         // DIE
         Destroy(gameObject);
     }

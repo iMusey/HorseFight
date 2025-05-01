@@ -97,9 +97,9 @@ GameObject:
   - component: {fileID: 6017385442152306695}
   - component: {fileID: 4099665100304222789}
   - component: {fileID: 5950257014307630351}
-  - component: {fileID: -5353233508767398357}
+  - component: {fileID: -3445379761498842135}
   m_Layer: 0
-  m_Name: Standard
+  m_Name: Imposter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,11 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8ac6a6b302c304f8f4bd80d24b85c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.25
+  speed: 0.25
   baseSpeed: 0
-  maxHealth: 100
-  health: 100
-  strength: 10
+  maxHealth: 20
+  health: 20
+  strength: 100
   hpP: 0
   invincible: 0
   iFrames: 0
@@ -270,12 +270,12 @@ MonoBehaviour:
   wreck: {fileID: 4364366570212566915, guid: cd1bd87ce6ed80c498383c0ff5998783, type: 3}
   sprite: {fileID: 4099665100304222789}
   aura: {fileID: 3312989263956825700}
-  audioPlayer: {fileID: -5353233508767398357}
+  audioPlayer: {fileID: -3445379761498842135}
   bounce: {fileID: 8300000, guid: cf1fce3002d1a2641808373c4a754ab0, type: 3}
   bounceHit: {fileID: 0}
   volume: 0.05
   rb: {fileID: 5890352933062390901}
---- !u!82 &-5353233508767398357
+--- !u!82 &-3445379761498842135
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

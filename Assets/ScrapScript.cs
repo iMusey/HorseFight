@@ -44,7 +44,6 @@ public class ScrapScript : MonoBehaviour
 
             if (health <= 0)
             {
-                Debug.Log("merp");
                 rb.bodyType = RigidbodyType2D.Dynamic;
 
                 Vector2 v = this.transform.position - horse.transform.position;
@@ -54,10 +53,10 @@ public class ScrapScript : MonoBehaviour
 
 
             // if live DO DAMAGE!!!!
-            if (live)
+            if (((dmgCoeff * rb.velocity.magnitude) > 5f) && live && !(Vector2.Angle(rb.velocity,horse.rb.velocity) < 90))
             {
+                Debug.Log(Vector2.Angle(rb.velocity, horse.rb.velocity).ToString());
                 horse.health -= dmgCoeff * rb.velocity.magnitude;
-                Debug.Log((dmgCoeff * rb.velocity.magnitude).ToString());
             }
         }
     }
