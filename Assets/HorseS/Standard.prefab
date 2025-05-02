@@ -261,7 +261,7 @@ MonoBehaviour:
   baseSpeed: 0
   maxHealth: 100
   health: 100
-  strength: 10
+  strength: 15
   hpP: 0
   invincible: 0
   iFrames: 0

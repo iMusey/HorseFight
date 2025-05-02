@@ -40,7 +40,7 @@ public class WreckScript : MonoBehaviour
 
         if (countDown < 0)
         {
-            int numScrap = Random.Range(1, 3);
+            int numScrap = 1;
             for (int i = 0; i < numScrap; i++)
             {
                 ScrapScript s = Instantiate(scrap).GetComponent<ScrapScript>();

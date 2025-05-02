@@ -50,6 +50,9 @@ public class HorseScript : MonoBehaviour
         // speed gets faster with time
         speed = baseSpeed * GameManager.instance.timeSpeedFactor;
 
+        Vector3 pos = rb.position;
+        pos.z = 0;
+        transform.position = pos;
 
         if (health > maxHealth)
         {

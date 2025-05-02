@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: bac0a4b3b92b8ef45aeedf1e7082711d, type: 3}
-  horse: {fileID: 4674818851835584762, guid: f75bd000fc3eebb4fa4c6510188873e1, type: 3}
+  horse: {fileID: 4674818851835584762, guid: c5ad36558d47e164fada0083ad1a7a05, type: 3}
   horseName: Jackson Drape
   horseAlias: Drape
   hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}

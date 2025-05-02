@@ -29,8 +29,9 @@ public class ScrapScript : MonoBehaviour
         }
 
         // when its velocity is low enough it turns into terrain
-        if (rb.velocity.magnitude <= 0.01f)
+        if (rb.velocity.magnitude <= 0.05f)
         {
+            rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
     }
@@ -49,13 +50,15 @@ public class ScrapScript : MonoBehaviour
                 Vector2 v = this.transform.position - horse.transform.position;
                 v = v.normalized * horse.speed;
                 rb.velocity = v;
+
+                health = 5;
             }
 
 
+            Debug.Log(Vector2.Angle(rb.velocity, horse.rb.velocity).ToString());
             // if live DO DAMAGE!!!!
-            if (((dmgCoeff * rb.velocity.magnitude) > 5f) && live && !(Vector2.Angle(rb.velocity,horse.rb.velocity) < 90))
+            if (((dmgCoeff * rb.velocity.magnitude) > 5f) && live && !(Vector2.Angle(rb.velocity,horse.rb.velocity) < 45))
             {
-                Debug.Log(Vector2.Angle(rb.velocity, horse.rb.velocity).ToString());
                 horse.health -= dmgCoeff * rb.velocity.magnitude;
             }
         }

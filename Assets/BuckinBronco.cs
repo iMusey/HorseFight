@@ -43,10 +43,12 @@ public class BuckinBronco : HorseScript
             {
                 Vector2 v = new Vector2((Random.Range(0, 2) * 2 - 1) * Random.Range(-1f, 1f), (Random.Range(0, 2) * 2 - 1) * Random.Range(-1f, 1f));
                 rb.velocity = v;
+                baseSpeed -= 0.02f;
             }
             else
             {
-                baseSpeed += 0.1f;
+                Debug.Log("Cheeky Nandos lol");
+                baseSpeed += 0.6f;
             }
         }
     }
