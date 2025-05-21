@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8954048501882398609
+--- !u!1 &8249139487411727784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3052937901706895229}
-  - component: {fileID: 6191214222157530251}
+  - component: {fileID: 8226421261925618827}
+  - component: {fileID: 4987546984428489005}
   m_Layer: 0
-  m_Name: Jackson Drape
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3052937901706895229
+--- !u!4 &8226421261925618827
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954048501882398609}
+  m_GameObject: {fileID: 8249139487411727784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,21 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6191214222157530251
+--- !u!114 &4987546984428489005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954048501882398609}
+  m_GameObject: {fileID: 8249139487411727784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cdc81729075a6a4f885ccc532a0af1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 483972060c6ca9f4cbabcafd056f7728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: bac0a4b3b92b8ef45aeedf1e7082711d, type: 3}
-  horse: {fileID: 4674818851835584762, guid: c5ad36558d47e164fada0083ad1a7a05, type: 3}
-  jockey: {fileID: 0}
-  horseName: Jackson Drape
-  horseAlias: Drape
-  hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}
+  tracker: {fileID: 5785110078251021256, guid: 0fd467fb3665e0b4fbf827b7d241ac26, type: 3}
+  points: []
+  numBounces: 0
+  duration: 4
+  speed: 0
+  dir: {x: 0, y: 0, z: 0}

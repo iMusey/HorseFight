@@ -8,14 +8,15 @@ public class LaserGuy : HorseScript
 {
     public float laserCharge;
     public float laserChargeMax;
+    public GameObject LaserObj;
     public float chargeSpeed;
     public float laserSpeed;
-    public float numBounces;
+    public int numBounces;
 
     public float laserDamage;
     public float laserAngle;
 
-    public GameObject laserPointer;
+    public SpriteRenderer laserPointer;
 
     // Update is called once per frame
     public override void Update()
@@ -112,43 +113,26 @@ public class LaserGuy : HorseScript
         // Charge Laser
         if (laserCharge <= laserChargeMax)
         {
-            laserCharge += chargeSpeed * Time.deltaTime;
+            laserCharge += chargeSpeed * GameManager.instance.timeSpeedFactor * Time.deltaTime;
         }
 
         // FIRE
-        if (laserChargeMax - laserCharge < 0.1f)
+        if ((laserChargeMax - laserCharge) < 0.1f)
         {
             laserCharge = 0;
 
             Vector2 dir = new Vector2(Mathf.Cos(laserAngle), Mathf.Sin(laserAngle));
 
-            for (int i = 0; i < numBounces; i++)
-            {
-                dir = FireLaser(dir);
-            }
-
+            LaserScript l = Instantiate(LaserObj).GetComponent<LaserScript>();
+            l.transform.position = laserPointer.transform.position;
+            l.dir = dir;
+            l.speed = laserSpeed * GameManager.instance.timeSpeedFactor;
+            l.numBounces = numBounces;
         }
     }
 
-    public Vector2 FireLaser(Vector2 dir)
+    public void FireLaser()
     {
-        Vector2 newDir = Vector2.zero;
-        Debug.DrawRay(laserPointer.transform.position, dir);
-        RaycastHit2D[] hits = Physics2D.RaycastAll(laserPointer.transform.position, dir, 100, 0, -10, 10);
-        foreach (RaycastHit2D hit in hits)
-        {
-            Debug.Log("hello");
-            Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.gameObject.GetComponent<HorseScript>() != null)
-            {
-                HorseScript horse = hit.collider.gameObject.GetComponent<HorseScript>();
 
-                horse.health -= laserDamage;
-            }
-
-            newDir = 2 * (Vector2.Dot(dir, hit.normal) * hit.normal) - dir;
-        }
-
-        return newDir;
     }
 }

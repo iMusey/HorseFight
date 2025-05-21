@@ -6,6 +6,7 @@ public class HorseInfoScript : MonoBehaviour
 {
     public Sprite sprite;
     public GameObject horse;
+    public GameObject jockey;
     public string horseName;
     public string horseAlias;
     public AudioClip hitSound;

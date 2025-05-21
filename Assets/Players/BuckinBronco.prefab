@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5850397642449345957}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71393836, y: 0.63897717, z: 733.2339}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6b50ab299d12bdb4b96ccb42d541768d, type: 3}
   horse: {fileID: 4674818851835584762, guid: a59a23dee1ce82247a9c7770c51a79c9, type: 3}
+  jockey: {fileID: 0}
   horseName: Buckin' Bronco
   horseAlias: Buck
   hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}

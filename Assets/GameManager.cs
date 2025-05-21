@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] players;
     public GameObject card;
+    public GameObject unit;
 
     public MapScript map;
     public Leaderboard leaderboard;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
             // Make horse
             HorseInfoScript horseInfo = Instantiate(players[i]).GetComponent<HorseInfoScript>();
             HorseScript horse = Instantiate(horseInfo.horse).GetComponent<HorseScript>();
+            JockeyScript jockey = Instantiate(horseInfo.jockey).GetComponent<JockeyScript>();
 
             if (devMode)
             {
@@ -47,17 +49,18 @@ public class GameManager : MonoBehaviour
                 horse.speed = horse.speed * 2;
             }
 
-            // set spawn data
+            // HORSE spawn data
             horse.facing = map.spawns[i].facing;
             horse.gameObject.transform.position = map.spawns[i].transform.position;
             horse.sprite.sprite = horseInfo.sprite;
             horse.bounceHit = horseInfo.hitSound;
 
+
             // make card
             PlayerCard pCard = Instantiate(card, leaderboard.transform).GetComponent<PlayerCard>();
-            pCard.title.text = horseInfo.horseName;
+            pCard.title.text = jockey.jockeyName + " " + horseInfo.horseName;
             pCard.horse = horse;
-            pCard.icon.sprite = horseInfo.sprite;
+            pCard.icon.sprite = jockey.sprite;
 
             leaderboard.cards[i] = pCard;
 

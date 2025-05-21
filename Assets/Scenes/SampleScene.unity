@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 222997740}
   - component: {fileID: 222997739}
   - component: {fileID: 222997742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 243745190}
   - component: {fileID: 243745189}
   - component: {fileID: 243745188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,15 +1589,10 @@ MonoBehaviour:
   time: 0
   timeSpeedFactor: 0
   players:
-  - {fileID: 5850397642449345957, guid: 2e930b167470b084c84c3500905768f5, type: 3}
-  - {fileID: 7106298418135058264, guid: 72ecce253241faa4bb50d95a71da77c2, type: 3}
-  - {fileID: 8058020047798887219, guid: 4da5a086cfb1de640bf774411d2ea3e7, type: 3}
-  - {fileID: 1695232304252238662, guid: 074fc42fc9d29f14daa26fe0d4f86b12, type: 3}
-  - {fileID: 8926047026493670428, guid: d6096bd2c4677d64c8e1e409a701f9b3, type: 3}
-  - {fileID: 4694872061143308254, guid: cebfe5ca45749aa4783a641031d876df, type: 3}
-  - {fileID: 8954048501882398609, guid: 5677f5640f626574eb830973215d5d42, type: 3}
-  - {fileID: 3003989776850591575, guid: dab70d3a05cee444bae48a362cf70352, type: 3}
+  - {fileID: 5850397642449345957, guid: 78378f004f1517642a15e3bed2ce1943, type: 3}
+  - {fileID: 5850397642449345957, guid: 78378f004f1517642a15e3bed2ce1943, type: 3}
   card: {fileID: 4717791713800700099, guid: 5ada92929681ae04089e2efdf2e40651, type: 3}
+  unit: {fileID: 4875645206687470242, guid: a87afc8c9ecdc7d4ca0478890c831478, type: 3}
   map: {fileID: 1080610369}
   leaderboard: {fileID: 185395646}
   numPlayers: 0
@@ -1755,7 +1750,7 @@ GameObject:
   - component: {fileID: 716566298}
   - component: {fileID: 716566297}
   - component: {fileID: 716566296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1908,7 @@ GameObject:
   - component: {fileID: 749393229}
   - component: {fileID: 749393228}
   - component: {fileID: 749393227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2647,7 +2642,7 @@ GameObject:
   - component: {fileID: 1202544235}
   - component: {fileID: 1202544234}
   - component: {fileID: 1202544237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3189,7 +3184,7 @@ GameObject:
   - component: {fileID: 1563164400}
   - component: {fileID: 1563164399}
   - component: {fileID: 1563164398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3348,7 +3343,7 @@ GameObject:
   - component: {fileID: 1648264790}
   - component: {fileID: 1648264789}
   - component: {fileID: 1648264792}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3572,7 +3567,7 @@ GameObject:
   - component: {fileID: 2093141688}
   - component: {fileID: 2093141687}
   - component: {fileID: 2093141690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}

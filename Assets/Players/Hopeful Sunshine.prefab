@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8926047026493670428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3477219, y: 1.5465409, z: 0.94099134}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c3956e4879ec03b40b8beae576934a81, type: 3}
   horse: {fileID: 4674818851835584762, guid: f75bd000fc3eebb4fa4c6510188873e1, type: 3}
+  jockey: {fileID: 0}
   horseName: Hopeful Sunshine
   horseAlias: Hope
   hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}

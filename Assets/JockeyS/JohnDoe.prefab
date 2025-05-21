@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8954048501882398609
+--- !u!1 &1210844865692073462
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3052937901706895229}
-  - component: {fileID: 6191214222157530251}
+  - component: {fileID: 2079489611051472177}
+  - component: {fileID: 7071263254007364617}
   m_Layer: 0
-  m_Name: Jackson Drape
+  m_Name: JohnDoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3052937901706895229
+--- !u!4 &2079489611051472177
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954048501882398609}
+  m_GameObject: {fileID: 1210844865692073462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.22986938, y: 0.1641455, z: -0.09140485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6191214222157530251
+--- !u!114 &7071263254007364617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954048501882398609}
+  m_GameObject: {fileID: 1210844865692073462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cdc81729075a6a4f885ccc532a0af1b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8f2e30ba8c20bf4e852bf6981cbb908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpeed: 10
+  maxHealth: -5
+  strength: 20
+  critChance: 5
+  cooldownReduction: 0
+  jockeyName: John Doe
   sprite: {fileID: 21300000, guid: bac0a4b3b92b8ef45aeedf1e7082711d, type: 3}
-  horse: {fileID: 4674818851835584762, guid: c5ad36558d47e164fada0083ad1a7a05, type: 3}
-  jockey: {fileID: 0}
-  horseName: Jackson Drape
-  horseAlias: Drape
-  hitSound: {fileID: 8300000, guid: dfddc405b2ac0604d8f81178150d6f01, type: 3}
