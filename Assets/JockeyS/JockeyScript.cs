@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class JockeyScript : MonoBehaviour
 {
-    public float baseSpeed;
+    public HorseScript HorseScript;
+
+    public float speed;
     public float maxHealth;
     public float strength;
     public float critChance;
     public float cooldownReduction;
 
-    public string jockeyName;
     public Sprite sprite;
 
     // Start is called before the first frame update
@@ -23,14 +24,5 @@ public class JockeyScript : MonoBehaviour
     void Update()
     {
 
-    }
-
-
-    public void Hit(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<HorseScript>() != null)
-        {
-            Debug.Log("merp");
-        }
     }
 }

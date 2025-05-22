@@ -21,6 +21,7 @@ public class LaserGuy : HorseScript
     // Update is called once per frame
     public override void Update()
     {
+        /*
         laserAngle = Random.Range(1, 360);
         laserAngle *= Mathf.Deg2Rad;
 
@@ -99,17 +100,20 @@ public class LaserGuy : HorseScript
             Destroy(gameObject);
             GameManager.instance.numPlayers--;
 
-            // Summon Wreck
+            /* Summon Wreck
             WreckScript w = Instantiate(wreck).GetComponent<WreckScript>();
             w.transform.position = transform.position;
             w.sprite.sprite = sp;
             w.rb.velocity = vel;
 
         }
+
+        */
     }
 
     public void Laser()
     {
+        /*
         // Charge Laser
         if (laserCharge <= laserChargeMax)
         {
@@ -129,10 +133,7 @@ public class LaserGuy : HorseScript
             l.speed = laserSpeed * GameManager.instance.timeSpeedFactor;
             l.numBounces = numBounces;
         }
+        */
     }
 
-    public void FireLaser()
-    {
-
-    }
 }

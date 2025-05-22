@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b7e10d75466f4cb46eb1684a30de8, type: 3}
+  m_Name: DATA
+  m_EditorClassIdentifier: 
+  wreck: {fileID: 4364366570212566915, guid: cd1bd87ce6ed80c498383c0ff5998783, type: 3}
+  horses:
+  - {fileID: 4423701423832342813, guid: 5a796b6d443bb3341b54368ae995109a, type: 3}
+  jockeys:
+  - {fileID: 8004308958891737342, guid: 1c76bf33dbeae884397f1bc819f4954e, type: 3}

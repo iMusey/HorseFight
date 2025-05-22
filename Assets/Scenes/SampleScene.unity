@@ -1588,14 +1588,13 @@ MonoBehaviour:
   devMode: 0
   time: 0
   timeSpeedFactor: 0
-  players:
-  - {fileID: 5850397642449345957, guid: 78378f004f1517642a15e3bed2ce1943, type: 3}
-  - {fileID: 5850397642449345957, guid: 78378f004f1517642a15e3bed2ce1943, type: 3}
+  horses: 0000000000000000000000000000000000000000000000000000000000000000
+  jockeys: 0000000000000000000000000000000000000000000000000000000000000000
   card: {fileID: 4717791713800700099, guid: 5ada92929681ae04089e2efdf2e40651, type: 3}
-  unit: {fileID: 4875645206687470242, guid: a87afc8c9ecdc7d4ca0478890c831478, type: 3}
   map: {fileID: 1080610369}
   leaderboard: {fileID: 185395646}
   numPlayers: 0
+  prefabData: {fileID: 11400000, guid: f7e81a1a027bd4d4f8a17908ef8bf5b2, type: 2}
 --- !u!4 &607586338
 Transform:
   m_ObjectHideFlags: 0

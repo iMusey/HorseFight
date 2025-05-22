@@ -74,7 +74,7 @@ public class WreckScript : MonoBehaviour
                 target.attachedRigidbody.velocity = blastDir.normalized * propulsion * GameManager.instance.timeSpeedFactor;
                 HorseScript h = target.GetComponent<HorseScript>();
 
-                h.facing = blastDir;
+                h.movement.facing = blastDir;
                 h.health -= strength;
                 h.stunned += 1.5f;
             }

@@ -9,7 +9,6 @@ public class PlayerCard : MonoBehaviour
     public TextMeshProUGUI title;
     public Slider slider;
     public HorseScript horse;
-    public JockeyScript jockey;
     public Image icon;
 
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,14 +11,18 @@ public class GameManager : MonoBehaviour
     public float time;
     public float timeSpeedFactor;
 
-    public GameObject[] players;
+    public int[] horses;
+    public int[] jockeys;
+
+
     public GameObject card;
-    public GameObject unit;
 
     public MapScript map;
     public Leaderboard leaderboard;
 
     public int numPlayers;
+
+    public prefabData prefabData;
 
     public static GameManager instance;
 
@@ -33,15 +38,42 @@ public class GameManager : MonoBehaviour
     {
         if (devMode)
         {
-            time = 90;
+            time = 120;
         }
 
+        for (int i = 0; i < horses.Length; i++)
+        {
+            HorseScript horse = Instantiate(prefabData.horses[horses[i]]).GetComponent<HorseScript>();
+            JockeyScript jockey = Instantiate(prefabData.jockeys[jockeys[i]]).GetComponent<JockeyScript>();
+            jockey.transform.parent = horse.transform;
+            jockey.HorseScript = horse;
+
+            // jockey stat adjustments
+            horse.speed += jockey.speed;
+            horse.maxHealth += jockey.maxHealth;
+            horse.health = horse.maxHealth;
+            horse.strength += jockey.strength;
+            horse.critChance += jockey.critChance;
+            horse.cooldownReduction += jockey.cooldownReduction;
+
+            // spawn data
+            horse.movement.facing = map.spawns[i].facing;
+            horse.gameObject.transform.position = map.spawns[i].transform.position;
+
+            // name
+            horse.transform.name = jockey.gameObject.transform.name + " " + horse.gameObject.transform.name;
+
+            numPlayers++;
+        }
+
+
+
+        /*
         for (int i = 0; i < players.Length; i++)
         {
             // Make horse
             HorseInfoScript horseInfo = Instantiate(players[i]).GetComponent<HorseInfoScript>();
             HorseScript horse = Instantiate(horseInfo.horse).GetComponent<HorseScript>();
-            JockeyScript jockey = Instantiate(horseInfo.jockey).GetComponent<JockeyScript>();
 
             if (devMode)
             {
@@ -54,18 +86,19 @@ public class GameManager : MonoBehaviour
             horse.gameObject.transform.position = map.spawns[i].transform.position;
             horse.sprite.sprite = horseInfo.sprite;
             horse.bounceHit = horseInfo.hitSound;
-
+            
 
             // make card
             PlayerCard pCard = Instantiate(card, leaderboard.transform).GetComponent<PlayerCard>();
-            pCard.title.text = jockey.jockeyName + " " + horseInfo.horseName;
+            //pCard.title.text = jockey.jockeyName + " " + horseInfo.horseName;
             pCard.horse = horse;
-            pCard.icon.sprite = jockey.sprite;
+            //pCard.icon.sprite = jockey.sprite;
 
             leaderboard.cards[i] = pCard;
 
             numPlayers++;
         }
+        */
     }
 
     // Update is called once per frame
