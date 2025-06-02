@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HealthPack : MonoBehaviour
@@ -10,6 +11,7 @@ public class HealthPack : MonoBehaviour
     public float maxCD;
     public float cooldown;
 
+    public DamageHandler damageHandler;
     public SpriteRenderer sprite;
 
     public Rigidbody2D rb;
@@ -45,9 +47,13 @@ public class HealthPack : MonoBehaviour
         if (live && col.gameObject.GetComponent<HorseScript>() != null)
         {
             HorseScript horse = col.gameObject.GetComponent<HorseScript>();
+            if (horse.hpP == 1)
+            {
+                return;
+            }
             live = false;
             cooldown = maxCD * GameManager.instance.timeSpeedFactor;
-            horse.health += strength;
+            damageHandler.DealDamage(strength, 0, horse, false, true);
         }
     }
 }

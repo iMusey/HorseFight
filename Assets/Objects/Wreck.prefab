@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3696096157952126174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 4583382849938790004}
   - component: {fileID: 2364544913599308211}
   - component: {fileID: 5397289428416475837}
+  - component: {fileID: -6867089286191386228}
   m_Layer: 0
   m_Name: Wreck
   m_TagString: Untagged
@@ -315,7 +316,22 @@ MonoBehaviour:
   strength: 20
   propulsion: 2
   radius: 2
-  scrap: {fileID: 5738274794832540712, guid: 1b37b5d664db66043a8e158c1c75c694, type: 3}
+  damageHandler: {fileID: -6867089286191386228}
+  prefabData: {fileID: 11400000, guid: f7e81a1a027bd4d4f8a17908ef8bf5b2, type: 2}
+--- !u!114 &-6867089286191386228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364366570212566915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf13e9e29cd20343a09922749294690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horse: {fileID: 0}
+  prefabData: {fileID: 11400000, guid: f7e81a1a027bd4d4f8a17908ef8bf5b2, type: 2}
 --- !u!1 &4476724152074611755
 GameObject:
   m_ObjectHideFlags: 0

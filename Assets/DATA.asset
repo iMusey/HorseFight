@@ -13,7 +13,25 @@ MonoBehaviour:
   m_Name: DATA
   m_EditorClassIdentifier: 
   wreck: {fileID: 4364366570212566915, guid: cd1bd87ce6ed80c498383c0ff5998783, type: 3}
+  scrap: {fileID: 5738274794832540712, guid: 1b37b5d664db66043a8e158c1c75c694, type: 3}
+  dmgNum: {fileID: 2476550800040878780, guid: 6d20da91302bf4b499e3c1bfee5717c4, type: 3}
+  card: {fileID: 4717791713800700099, guid: 5ada92929681ae04089e2efdf2e40651, type: 3}
+  explosion: {fileID: 6077291507666805998, guid: 47a74d77833f0914b9275ef67cea2ee3, type: 3}
+  laser: {fileID: 8249139487411727784, guid: cef08c56f0c0f8e4b9a348d48774db25, type: 3}
+  laserTracker: {fileID: 5785110078251021256, guid: 0fd467fb3665e0b4fbf827b7d241ac26, type: 3}
+  maps:
+  - {fileID: 2365784266191831556, guid: 4c9a6e0b4da7804489ebc75452fc8917, type: 3}
   horses:
   - {fileID: 4423701423832342813, guid: 5a796b6d443bb3341b54368ae995109a, type: 3}
+  - {fileID: 4423701423832342813, guid: cbc3c85a740819d46bde429b52c9577f, type: 3}
   jockeys:
   - {fileID: 8004308958891737342, guid: 1c76bf33dbeae884397f1bc819f4954e, type: 3}
+  - {fileID: 8004308958891737342, guid: f199c607636917640b0283a630bd22b2, type: 3}
+  - {fileID: 8004308958891737342, guid: 1d7e4d931eafc34449669ed40f47a13d, type: 3}
+  colors:
+  - {r: 1, g: 0.96104795, b: 0.3150943, a: 1}
+  - {r: 1, g: 0.3098198, b: 0.23137254, a: 1}
+  - {r: 0.18679237, g: 1, b: 0.2107126, a: 1}
+  - {r: 0.18823528, g: 0.26905945, b: 1, a: 1}
+  - {r: 0.88872683, g: 0.1490565, b: 1, a: 1}
+  - {r: 0.3584906, g: 0.034496255, b: 0.034496255, a: 1}

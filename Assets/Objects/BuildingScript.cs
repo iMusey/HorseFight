@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class BuildingScript : MonoBehaviour
+public class BuildingScript : Terrain
 {
     public float hp;
     public float maxHp;
@@ -35,7 +35,7 @@ public class BuildingScript : MonoBehaviour
         if (hp <= 0)
         {
             // building explodes into scrap
-            int numScrap = Random.Range(3,6);
+            int numScrap = Random.Range(2, 3);
             for (int i = 0; i < numScrap; i++)
             {
                 ScrapScript s = Instantiate(scrap).GetComponent<ScrapScript>();
@@ -55,9 +55,11 @@ public class BuildingScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        hp -= 1;
+        if (collision.gameObject.GetComponent<HorseScript>() != null || collision.gameObject.GetComponent<ScrapScript>() != null)
+        {
+            hp--;
+        }
     }
 }

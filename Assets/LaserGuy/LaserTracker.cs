@@ -9,25 +9,42 @@ public class LaserTracker : MonoBehaviour
     public GameObject beamSegment;
     public LaserScript laser;
     public float beamPercent;
-    public Vector3 rotation;
+    public Vector3 start;
+    public Vector3 end;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        rotation = Vector3.zero;
-        rotation.z = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y, rb.velocity.x);
-        transform.eulerAngles = rotation;
+        if (rb.velocity.magnitude != 0)
+        {
+            end = transform.position + laser.transform.position;
+        }
+        PositionBeam(start, end);
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        laser.Bounce(transform.eulerAngles);
+        laser.Bounce();
+    }
+
+    public void PositionBeam(Vector3 start, Vector3 end)
+    {
+        // calculate new start based on beam percent
+        Vector3 newStart = end - start;
+        float newBeamLength = newStart.magnitude * beamPercent;
+        newStart = newStart.normalized * newBeamLength;
+
+        Vector3 center = (newStart + end) / 2;
+        Vector3 direction = (end - newStart).normalized;
+
+        beamSegment.transform.localScale = new Vector3(1f, 1 * newBeamLength, 1f);
+        beamSegment.transform.localPosition = center - transform.position - laser.transform.position;
+        beamSegment.transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
     }
 }

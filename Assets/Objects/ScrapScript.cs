@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScrapScript : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Vector3 facing;
     public float health;
 
     public bool live;
     public float dmgCoeff;
+
+    public DamageHandler damageHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +24,8 @@ public class ScrapScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        facing = rb.velocity;
+
         if (rb.velocity.magnitude > 0.05f)
         {
             live = true;
@@ -43,23 +50,32 @@ public class ScrapScript : MonoBehaviour
 
             health -= 1;
 
+            // When hp reaches 0 become dynamic
             if (health <= 0)
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
 
-                Vector2 v = this.transform.position - horse.transform.position;
+                Vector3 v = this.transform.position - horse.transform.position;
                 v = v.normalized * horse.speed;
                 rb.velocity = v;
 
                 health = 5;
             }
 
+            // normalize vector of horse position relative to scrap position
+            Vector3 rVec = (horse.transform.position - transform.position).normalized;
 
-            Debug.Log(Vector2.Angle(rb.velocity, horse.rb.velocity).ToString());
-            // if live DO DAMAGE!!!!
-            if (((dmgCoeff * rb.velocity.magnitude) > 5f) && live && !(Vector2.Angle(rb.velocity,horse.rb.velocity) < 45))
+            // get dot product of relative vector and unit vector of scrap
+            float dot = Vector3.Dot(facing, rVec);
+            //Debug.Log(dot.ToString());
+
+            // check if the angle is correct then do dmg
+            float dmg = dmgCoeff * rb.velocity.magnitude;
+
+            if (live && (dmg > 5f) && (dot > 0.75f))
             {
-                horse.health -= dmgCoeff * rb.velocity.magnitude;
+                Debug.Log(dmg);
+                damageHandler.DealDamage(dmg, -1, horse, false, false);
             }
         }
     }

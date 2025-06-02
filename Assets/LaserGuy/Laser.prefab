@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 483972060c6ca9f4cbabcafd056f7728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracker: {fileID: 5785110078251021256, guid: 0fd467fb3665e0b4fbf827b7d241ac26, type: 3}
   points: []
   numBounces: 0
   duration: 4
   speed: 0
   dir: {x: 0, y: 0, z: 0}
+  prefabData: {fileID: 11400000, guid: f7e81a1a027bd4d4f8a17908ef8bf5b2, type: 2}

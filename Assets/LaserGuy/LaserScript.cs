@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
-    public GameObject tracker;
     public LaserTracker[] points;
     public int numBounces;
     public float duration;
     public float speed;
+    public float damage;
+    public bool crit;
     public Vector3 dir;
 
-    // Start is called before the first frame update
+    public prefabData prefabData;
+
+
     void Start()
     {
+        // set up first tracker
         points = new LaserTracker[numBounces + 1];
 
-        LaserTracker t = Instantiate(tracker).GetComponent<LaserTracker>();
+        LaserTracker t = Instantiate(prefabData.laserTracker).GetComponent<LaserTracker>();
+        t.start = t.transform.position;
         t.transform.position = transform.position;
         t.laser = this;
         t.rb.velocity = dir.normalized * speed;
@@ -28,7 +34,15 @@ public class LaserScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        duration -= Time.deltaTime;
+        // duration of beam determines when it
+        if (numBounces > 0)
+        {
+            duration -= Time.deltaTime/2;
+        }
+        else
+        {
+            duration -= Time.deltaTime*2;
+        }
 
         if (duration <= 0)
         {
@@ -36,17 +50,19 @@ public class LaserScript : MonoBehaviour
         }
     }
 
-    public void Bounce(Vector3 rot)
+    public void Bounce()
     {
         if (numBounces > 0)
         {
-            LaserTracker t = Instantiate(tracker).GetComponent<LaserTracker>();
+            LaserTracker t = Instantiate(prefabData.laserTracker).GetComponent<LaserTracker>();
             t.laser = this;
             t.transform.parent = this.transform;
             t.rb.bodyType = RigidbodyType2D.Static;
             t.rb.simulated = false;
             t.transform.position = points[0].transform.position;
-            t.transform.eulerAngles = rot;
+            t.end = t.transform.position;
+            t.start = points[0].start;
+            points[0].start = t.end;
             points[numBounces] = t;
 
             numBounces--;
