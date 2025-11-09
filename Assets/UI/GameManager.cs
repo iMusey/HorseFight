@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -55,6 +56,8 @@ public class GameManager : MonoBehaviour
         {
             time = 120;
         }
+
+        leaderboard.cards = new PlayerCard[GameManager.instance.horses.Length];
 
         for (int i = 0; i < horses.Length; i++)
         {

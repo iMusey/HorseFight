@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterSelectMenu : MonoBehaviour
 {
+    public MenuManager menuManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,11 @@ public class CharacterSelectMenu : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Play()
+    {
+        Debug.Log("Play");
+        menuManager.ChangeMenu(menuManager.GameStage);
     }
 }

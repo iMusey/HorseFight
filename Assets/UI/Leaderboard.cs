@@ -10,7 +10,7 @@ public class Leaderboard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cards = new PlayerCard[GameManager.instance.horses.Length];
+        Debug.Log("hi");
     }
 
     // Update is called once per frame

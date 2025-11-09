@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public MenuManager menuManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         Debug.Log("Play");
+        menuManager.ChangeMenu(menuManager.MapSelectMenu);
     }
     public void Other()
     {
